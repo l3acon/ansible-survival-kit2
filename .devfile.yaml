@@ -1,6 +1,6 @@
 schemaVersion: 2.2.0
 metadata:
-  name: ansible-survival-kit
+  name: ansible-survival-kit2
   displayName: Ansible Survival Kit — Ansible Island Adventure
   description: Participant workspace with Ansible Development Tools for the Island challenges
 
@@ -24,7 +24,7 @@ commands:
         ansible-galaxy collection install
         -p /home/user/.ansible/collections
         kubernetes.core:6.2.0 community.general:11.4.0 ansible.posix:2.1.0
-      workingDir: /projects/ansible-survival-kit
+      workingDir: /projects/ansible-survival-kit2
       label: Install lab collections
       group:
         kind: build
@@ -34,7 +34,7 @@ commands:
     exec:
       component: ansible-tools
       commandLine: ansible-playbook hello-world.yml
-      workingDir: /projects/ansible-survival-kit
+      workingDir: /projects/ansible-survival-kit2
       label: Run Hello World
       group:
         kind: run

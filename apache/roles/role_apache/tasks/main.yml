@@ -35,7 +35,16 @@
     dest: /etc/httpd/conf/httpd.conf
   notify: apache-restart
 
-- name: deploy index.html
+- name: Deploy the treasure page assets
+  ansible.builtin.copy:
+    src: treasure/
+    dest: /var/www/html/treasure/
+    owner: root
+    group: root
+    mode: '0644'
+    directory_mode: '0755'
+
+- name: Deploy the treasure page
   template:
     src: index.html.j2
     dest: /var/www/html/index.html
