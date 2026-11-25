@@ -1,7 +1,21 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Treasure Chest | Ansible Island Adventure</title>
+  <link rel="stylesheet" href="treasure/style.css">
+</head>
 <body>
-<h1>Ansible Island Challenge</h1>
-<h1>Treasure Hunt web server challenge </h1>
-<h1>The secret message is: {{ secret_message }}</h1>
+  <main class="chest">
+    <p class="event-name">Ansible Island Adventure</p>
+    <h1>You found a<br class="wide-break"> treasure chest</h1>
+    <p class="intro">Your Ansible playbook brought this web server to life.</p>
+    <figure class="treasure">
+      <figcaption>Treasure keyword</figcaption>
+      <code>{{ secret_message | trim | e }}</code>
+    </figure>
+    <p class="instruction">Enter the keyword on the scoreboard to claim your treasure.</p>
+  </main>
 </body>
 </html>
